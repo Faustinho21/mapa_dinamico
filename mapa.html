@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+<title>Map citizen Science Community UAB</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--leaflet links-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <!--Bootstrap links-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!--Style sheet of the map.-->
+  <link rel="stylesheet" href="./css/mapa.css" type="text/css">
+  <!--Normalize link, tto set the site in default.-->
+  <link rel="stylesheet" href="./css/normalize.css" type="text/css">
+  <!--Fonttype link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+</head>
+
+<header>
+
+  <div class="cabecera">
+    <h1 id = "titulo" class="mb-3">Map Citizen Science UAB </h1>
+  </div>
+
+</header>
+
+<body>
+<div class="container">
+  <div id="caja-texto" class="caja">
+    <p>This map was created for the UAB community. It was created with the information collected during the first citizen science workshop on June 22nd, and the first informal meeting on April 23rd. In this map, there are scientists involved in citizen science projects from the university faculties, institutions, and departments. </p>
+  </div>
+  <div id="caja-1" class="caja" >
+    <select name="select-profession" id="select">
+      <option value="title" hidden>Choose institute, faculty or department</option>
+      <option class="opciones"value="41.50074,2.11153">CVC</option>
+      <option class="opciones"value="41.50080,2.10935">CREAF</option>
+      <option class="opciones"value="41.49776, 2.10885">ICTA</option>
+      <option class="opciones"value="41.50041,2.11260">Engineering faculty</option>
+      <option class="opciones"value="41.5038913,2.10062">UAB Rectorate</option>
+      <option class="opciones"value="41.50549,2.10401"> Education faculty</option>
+      <option class="opciones"value="41.5025828,2.1067232">Psycology department</option>
+      <option class="opciones"value="41.502816,2.107471">Philosophy department</option>
+      <option class="opciones"value="41.50339,2.10747">Social and cultural anthropology department</option>
+      <option class="opciones"value="41.50184,2.10371">ECIU department</option>
+      <option class= "opciones" value="41.501417,2.1030887">Communication department</option>
+    </select>
+
+  </div>
+ 
+  <div id="caja-2" class="caja">
+    <div id="myMap"></div>
+    <script src="map.js"></script>
+
+  </div>
+
+</div>
+
+</body>
+
+<footer class="text-center text-white fixed-bottom " >
+
+
+  <div class="text-center text-dark p-3 " id="footer" >
+    © 2021 Copyright:
+    <a class="text-dark" href="https://www.uab.cat/web/investigar/itineraris/la-recerca/recerca-i-innovacio-responsable/ciencia-ciutadana/jornada-ciencia-ciutadana-a-la-uab-1345844883021.html">Ciencia Ciutadana UAB</a>
+  </div>
+
+</footer>
+
+
+</html>

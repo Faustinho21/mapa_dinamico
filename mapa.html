@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html  lang="en" dir="ltr">
 <head>
 
 <title>Map citizen Science Community UAB</title>
@@ -21,6 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <header>
@@ -28,18 +29,21 @@
   <div class="cabecera">
     <h1 id = "titulo" class="mb-3">Map Citizen Science UAB </h1>
   </div>
+  <div class="darkmode">
+     <i class="bx bx-sun bx-md" id="btn"></i>
+  </div>
 
 </header>
 
-<body>
+<body >
 <div class="container">
   <div id="caja-texto" class="caja">
     <p>This map was created for the UAB community. It was created with the information collected during the first citizen science workshop on June 22nd, and the first informal meeting on April 23rd. In this map, there are scientists involved in citizen science projects from the university faculties, institutions, and departments. </p>
   </div>
   <div id="caja-1" class="caja" >
     <select name="select-profession" id="select">
-      <option value="title" hidden>Choose institute, faculty or department</option>
-      <option class="opciones"value="41.50074,2.11153">CVC</option>
+      <option class="opciones" value="title" hidden>Choose institute, faculty or department</option>
+      <option class="opciones"  value="41.50074,2.11153">CVC</option>
       <option class="opciones"value="41.50080,2.10935">CREAF</option>
       <option class="opciones"value="41.49776, 2.10885">ICTA</option>
       <option class="opciones"value="41.50041,2.11260">Engineering faculty</option>
@@ -64,12 +68,12 @@
 
 </body>
 
-<footer class="text-center text-white fixed-bottom " >
+<footer class="text-center  fixed-bottom " >
 
 
-  <div class="text-center text-dark p-3 " id="footer" >
+  <div class="text-center  p-3 " id="footer" >
     © 2021 Copyright:
-    <a class="text-dark" href="https://www.uab.cat/web/investigar/itineraris/la-recerca/recerca-i-innovacio-responsable/ciencia-ciutadana/jornada-ciencia-ciutadana-a-la-uab-1345844883021.html">Ciencia Ciutadana UAB</a>
+    <a  id="enlace"href="https://www.uab.cat/web/investigar/itineraris/la-recerca/recerca-i-innovacio-responsable/ciencia-ciutadana/jornada-ciencia-ciutadana-a-la-uab-1345844883021.html">Ciencia Ciutadana UAB</a>
   </div>
 
 </footer>

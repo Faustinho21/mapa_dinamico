@@ -1,14 +1,15 @@
 //definicion del mapa para que en el codigo aparezca
-var myMap = L.map('myMap').setView([41.50184,2.10371], 16);
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+
+let myMap = L.map('myMap').setView([41.50184,2.10471], 15);
+ L.tileLayer('https://{s}.tile.jawg.io/jawg-sunny/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
+	attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. This map and website was made by Fausto Salazar',
 	maxZoom: 20,
-	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-		'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-		'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-	id: 'mapbox/streets-v11',
 	tileSize: 512,
-	zoomOffset: -1
+	zoomOffset: -1,
+	subdomains: 'abcd',
+	accessToken: 'Mc8bK9ZTgxSCTju3fL4q2WnvlBldLlI5CBSbKYQr6epQle3wlCWfetUGuH8QwDyn'
 }).addTo(myMap);
+
 //marcadores y popups en el mapa. Para los marcadores ir a la web de instamaps y copiar la
 //long y latitud de los puntos que pones, se pondran en el lugar exacto en el mapa de leaflet
 
@@ -85,3 +86,46 @@ document.getElementById("select").addEventListener('change',function(e){
 	}
 })
 
+let btn = document.querySelector("#btn");
+let text = document.querySelector("#enlace");
+btn.addEventListener("click",()=>{
+	change();
+});
+function change(){
+	if(btn.classList.contains("bx-sun")){
+		btn.classList.replace("bx-sun","bx-moon");
+		colordark();
+	}
+	else{
+		btn.classList.replace("bx-moon", "bx-sun");
+		colorwhite();
+	}
+}
+function colorwhite(){
+ document.body.style.backgroundColor ='#E3F4E3';
+ document.getElementById("titulo").style.color = 'black';
+ document.getElementById("caja-texto").style.color = 'black';
+ document.getElementById("btn").style.color = 'black';
+ document.getElementById("footer").style.color = 'black';
+ let x = document.getElementById("select");
+	x.style.color = 'black';
+	let y= document.getElementsByClassName("opciones");
+	let i;
+	for(i=0; i<y.length;i++){
+		y[i].style.backgroundColor = '#E3F4E3';
+	}	
+}
+function colordark(){
+	document.body.style.backgroundColor ='#1B1D1E';
+	document.getElementById("titulo").style.color = 'white';
+	document.getElementById("caja-texto").style.color = 'white';
+	document.getElementById("btn").style.color = 'white';
+	document.getElementById("footer").style.color = 'white';
+	let x = document.getElementById("select");
+	x.style.color = 'white';
+	let y= document.getElementsByClassName("opciones");
+	let i;
+	for(i=0; i<y.length;i++){
+		y[i].style.backgroundColor = '#1B1D1E';
+	}
+}
